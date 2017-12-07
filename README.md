@@ -25,7 +25,7 @@ Simply write your expression in the bottom text box and the result will get calc
 * With middle mouse button you can close it.
 
 # Dependencies
-It uses NCalc for evaluating the mathematical expressions.
+It uses [NCalc](https://ncalc.codeplex.com/) for evaluating the mathematical expressions.
 
 
 And yes the font is Comic Sans. :grin:
