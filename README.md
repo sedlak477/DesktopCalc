@@ -19,4 +19,4 @@ Check out the crypto branch to find a version of this calculator with some crypt
 [NCalc](https://ncalc.codeplex.com/) is used for evaluating the mathematical expressions.
 
 
-And yes the font is Comic Sans. :grin:
+And yes the font is Comic Sans (it's a placeholder). :grin:
