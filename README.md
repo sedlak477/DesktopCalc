@@ -1,4 +1,4 @@
-# DesktopCalc - Crypto Edition :money_with_wings:
+# DesktopCalc - Crypto Edition :chart_with_upwards_trend:
 A very simple calculator written in C# with WPF.
 
 # Crypto
