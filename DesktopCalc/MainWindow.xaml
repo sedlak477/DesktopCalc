@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DesktopCalc"
         mc:Ignorable="d"
-        Title="DesktopCalc" Height="350" Width="525"
+        Title="DesktopCalc" Height="350"
         Topmost="True"
         WindowStyle="None"
         MouseDown="Window_MouseDown"
@@ -13,9 +13,74 @@
         BorderThickness="3"
         BorderBrush="Black"
         Deactivated="Window_Deactivated"
-        Activated="Window_Activated">
-    <DockPanel Background="#eee">
-        <TextBox DockPanel.Dock="Bottom" FontFamily="Comic Sans MS" FontSize="27" TextChanged="TextBox_TextChanged" VerticalAlignment="Center" HorizontalContentAlignment="Center"/>
-        <TextBlock FontFamily="Comic Sans MS" FontWeight="DemiBold" FontSize="42" x:Name="textblock" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        Activated="Window_Activated"
+        FontFamily="Comic Sans MS"
+        Background="#eee"
+        SizeToContent="Width">
+    <DockPanel>
+        <DockPanel DockPanel.Dock="Right">
+            <DockPanel DockPanel.Dock="Top">
+                <Button DockPanel.Dock="Right" Content="Load" Click="Reload_Click"/>
+                <ComboBox x:Name="combobox_currency">
+                    <ComboBoxItem Content="AUD"/>
+                    <ComboBoxItem Content="BRL"/>
+                    <ComboBoxItem Content="CAD"/>
+                    <ComboBoxItem Content="CHF"/>
+                    <ComboBoxItem Content="CLP"/>
+                    <ComboBoxItem Content="CNY"/>
+                    <ComboBoxItem Content="CZK"/>
+                    <ComboBoxItem Content="DKK"/>
+                    <ComboBoxItem Content="EUR" IsSelected="True"/>
+                    <ComboBoxItem Content="GBP"/>
+                    <ComboBoxItem Content="HKD"/>
+                    <ComboBoxItem Content="HUF"/>
+                    <ComboBoxItem Content="IDR"/>
+                    <ComboBoxItem Content="INR"/>
+                    <ComboBoxItem Content="JPY"/>
+                    <ComboBoxItem Content="KRW"/>
+                    <ComboBoxItem Content="MXN"/>
+                    <ComboBoxItem Content="MYR"/>
+                    <ComboBoxItem Content="NOK"/>
+                    <ComboBoxItem Content="NZD"/>
+                    <ComboBoxItem Content="PHP"/>
+                    <ComboBoxItem Content="PKR"/>
+                    <ComboBoxItem Content="PLN"/>
+                    <ComboBoxItem Content="RUB"/>
+                    <ComboBoxItem Content="SEK"/>
+                    <ComboBoxItem Content="SGD"/>
+                    <ComboBoxItem Content="THB"/>
+                    <ComboBoxItem Content="TRY"/>
+                    <ComboBoxItem Content="TWD"/>
+                    <ComboBoxItem Content="USD"/>
+                    <ComboBoxItem Content="ZAR"/>
+                </ComboBox>
+            </DockPanel>
+            <DataGrid x:Name="datagrid_cryptoData" AutoGenerateColumns="False" IsReadOnly="True" SelectionMode="Single" SelectionUnit="FullRow" CanUserResizeColumns="False" CanUserResizeRows="False">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Coin" Binding="{Binding Ticker}"/>
+                    <DataGridTextColumn Header="BTC Value" Binding="{Binding BtcValue}">
+                        <DataGridTextColumn.CellStyle>
+                            <Style TargetType="DataGridCell">
+                                <EventSetter Event="MouseDoubleClick" Handler="Value_MouseDoubleClick"/>
+                            </Style>
+                        </DataGridTextColumn.CellStyle>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn Header="Fiat Value" Binding="{Binding FiatValue}">
+                        <DataGridTextColumn.CellStyle>
+                            <Style TargetType="DataGridCell">
+                                <EventSetter Event="MouseDoubleClick" Handler="Value_MouseDoubleClick"/>
+                            </Style>
+                        </DataGridTextColumn.CellStyle>
+                    </DataGridTextColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+        </DockPanel>
+        <DockPanel Width="525">
+            <DockPanel DockPanel.Dock="Bottom">
+                <Button DockPanel.Dock="Right" Content="Clear" Click="Clear_Click"/>
+                <TextBox x:Name="textbox_expression" FontSize="27" TextChanged="TextBox_TextChanged" VerticalAlignment="Center" HorizontalContentAlignment="Center" TextWrapping="Wrap"/>
+            </DockPanel>
+            <TextBlock FontWeight="DemiBold" FontSize="42" x:Name="textblock" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        </DockPanel>
     </DockPanel>
 </Window>
