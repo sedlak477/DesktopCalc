@@ -1,6 +1,11 @@
 # DesktopCalc :bar_chart:
 A very simple calculator written in C# with WPF.
 
+# Motivation
+The built-in Windows calculator lacks some features I desire, for example always staying on top
+or easy to go back and change some numbers. So I quickly made this very simple application adding
+all the features I wish Windows calculator had, it's as easy as that. :tada:
+
 # Features
 Simply write your expression in the bottom text box and the result will get calculated as you write it!
 * The window will always stay on top.
@@ -9,3 +14,6 @@ Simply write your expression in the bottom text box and the result will get calc
 
 # Dependencies
 It uses NCalc for evaluating the mathematical expressions.
+
+
+And yes the font is Comic Sans. :grin:
