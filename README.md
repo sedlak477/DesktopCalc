@@ -12,6 +12,9 @@ Simply write your expression in the bottom text box and the result will get calc
 * You can drag the window around by left-click dragging it.
 * With middle mouse button you can close it.
 
+# Editions
+Check out the crypto branch to find a version of this calculator with some crypto currency functionality!
+
 # Dependencies
 [NCalc](https://ncalc.codeplex.com/) is used for evaluating the mathematical expressions.
 
